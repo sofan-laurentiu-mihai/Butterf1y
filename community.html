@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover community events and find your tribe.">
+    <title>Community - Butterf1y</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Main container for the page content -->
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="profile-menu">
+                <button class="profile-icon" onclick="toggleMenu()">☰</button>
+                <ul class="dropdown-menu">
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="square">
+            <h2 id="community-heading">Community Events</h2>
+            
+            <!-- Event List -->
+            <div class="event-list">
+                <button class="event-title-button" onclick="showEventDetails('event1')">Book Club Gathering @ UTCN Hub</button>
+                <button class="event-title-button" onclick="showEventDetails('event2')">Theater Night @ Cinema Florin Piersic</button>
+                <button class="event-title-button" onclick="showEventDetails('event3')">Gaming Night @ Form Cafe</button>
+            </div>
+
+            <div id="central-message">Check out some of our recent events!</div>
+
+            <!-- Event Details (Initially Hidden) -->
+            <div id="event-details" class="hidden">
+                <h3 id="event-title"></h3>
+                <div id="event-photos"></div>
+                <ul id="review-list"></ul>
+                <a href="events.html">
+                    <button class="back-button">Back to Events</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-icons-container">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                <img src="images/instalogo.png" alt="Instagram">
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+                <img src="images/tiktoklogo.png" alt="TikTok">
+            </a>
+            <!-- X (formerly Twitter) -->
+            <a href="https://www.x.com" target="_blank" class="social-icon x">
+                <img src="images/xlogo.png" alt="X">
+            </a>
+        </div>
+
+    <!-- Bottom Left Logo -->
+    <div class="bottom-left-logo">
+        <img src="images/logonume.png" alt="Your Logo">
+    </div>
+    <div class="footer-text">
+        <p>Contact us: info@butterf1y.com</p>
+        <p>© 2024 Butterf1y. All Rights Reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>

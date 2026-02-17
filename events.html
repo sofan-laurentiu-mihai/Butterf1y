@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Events - Find Hobby Buddies">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function filterEvents(category) {
+            const events = document.querySelectorAll('.event');
+
+            events.forEach(event => {
+                const eventCategory = event.getAttribute('data-category');
+
+                if (category === 'all' || eventCategory === category) {
+                    event.style.display = 'block';
+                } else {
+                    event.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Butterfly Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="profile-menu">
+                <button class="profile-icon" onclick="toggleMenu()">☰</button>
+                <ul class="dropdown-menu hidden">
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Filter Buttons -->
+    <section id="filter">
+        <div class="filter-buttons">
+            <button class="filter-btn" onclick="filterEvents('all')">All</button>
+            <button class="filter-btn" onclick="filterEvents('party')">Party</button>
+            <button class="filter-btn" onclick="filterEvents('nature')">Nature</button>
+            <button class="filter-btn" onclick="filterEvents('theater/opera')">Theater/Movies</button>
+            <button class="filter-btn" onclick="filterEvents('music')">Music</button>
+            <button class="filter-btn" onclick="filterEvents('arts/creative')">Arts/Creative</button>
+            <button class="filter-btn" onclick="filterEvents('sports')">Sports</button>
+            <button class="filter-btn" onclick="window.location.href='bundles.html'" style="background-color: #5981ff; color: white; border: none; padding: 15px 30px; font-size: 16px; border-radius: 5px;">Bundles</button>
+        </div>
+    </section>
+    
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="events">
+            <h2 style="font-family: 'Courier New', Courier, monospace;">Upcoming Events</h2>
+
+            <!-- Event 1 -->
+            <div class="event" data-category="music" style="background-image: url('https://static.actualdecluj.ro//uploads/2020/06/vita.jpg'); background-position: center 30%;">
+                <h3>Concert Vita de Vie</h3>
+                <p style="font-family: 'Courier New', Courier, monospace;"><strong>Date:</strong> December 7, 2024</p>
+                <p style="font-family: 'Courier New', Courier, monospace;"><strong>Location:</strong> Form SPACE, Cluj-Napoca</p>
+                <p class="short-description">Join us for an unforgettable night with Vita de Vie, a live concert that will electrify the crowd at Form SPACE!</p>
+                <p class="full-description hidden">Experience the raw energy of one of the most iconic rock bands in Romania. Vita de Vie is known for their electrifying performances, emotional lyrics, and powerful stage presence. This concert will feature their greatest hits along with some exclusive new tracks. Don't miss the chance to be a part of this thrilling musical journey!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+                   
+
+            <!-- Event 2 -->
+            <div class="event" data-category="arts/creative" style="background-image: url('https://www.stjohns.ca/en/news/resources/Blog/Recreation-Social---Recreation4.jpg'); background-position: center 20%;">
+                <h3>Paint Night</h3>
+                <p><strong>Date:</strong> January 3, 2025</p>
+                <p><strong>Location:</strong> Piata Unirii 21, Cluj-Napoca</p>
+                <p class="short-description">Unleash your inner artist at Paint Night! Enjoy a fun evening of painting while sipping on your favorite drink.</p>
+                <p class="full-description hidden">Join us for a relaxing and creative evening at Paint Night! Whether you’re a seasoned artist or just picking up a brush for the first time, this event offers the perfect opportunity to explore your artistic side. Guided by a professional instructor, you'll create your own masterpiece in a friendly and supportive atmosphere. All materials, including paints, brushes, and canvases, will be provided. Plus, enjoy a complimentary drink to inspire your creativity. This is a great event to unwind, make new friends, or share a memorable experience with loved ones. No prior experience is needed—just bring your enthusiasm and a smile!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+
+            <!-- Event 3 -->
+            <div class="event" data-category="sports" style="background-image: url('https://image.kurier.at/images/cfs_landscape_1232w_693h/4219844/46-150571676.jpg'); background-position: center 70%;">
+                <h3>Puppy Yoga</h3>
+                <p><strong>Date:</strong> December 14, 2024</p>
+                <p><strong>Location:</strong> Street Horia Măcelariu 83, Cluj-Napoca</p>
+                <p class="short-description">A unique yoga experience with adorable puppies!</p>
+                <p class="full-description hidden">Join us for a one-of-a-kind yoga experience that combines relaxation, fitness, and playful puppies! Puppy Yoga brings the calming effects of yoga together with the joy of interacting with adorable puppies. Whether you're a seasoned yogi or a beginner, this class is designed to be fun and accessible to all. As you move through gentle poses, you'll have the chance to cuddle, pet, and play with the puppies, creating a therapeutic and heartwarming experience. The presence of puppies adds an extra element of joy and laughter, making this an event you won't want to miss. All yoga mats and equipment will be provided—just bring your enthusiasm and a love for puppies!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+
+            <!-- Event 4 -->
+            <div class="event" data-category="music" style="background-image: url('https://res.cloudinary.com/shotgun/image/upload/c_limit,w_1200,h_627,g_center/f_jpg/q_auto/production/artworks/1_dtm19c.png'); background-position: center 90%; right: 50px;">
+                <h3>Mamacita</h3>
+                <p><strong>Date:</strong> February 14, 2025</p>
+                <p><strong>Location:</strong> Street Horia Măcelariu 83, Cluj-Napoca</p>
+                <p class="short-description">A unique yoga experience with adorable puppies!</p>
+                <p class="full-description hidden">Get ready for a night of electrifying music with Mamacita, a dynamic live performance that will bring the heat to Cluj-Napoca! Known for their energetic beats and captivating stage presence, Mamacita blends traditional rhythms with contemporary influences to create a musical experience like no other. Whether you're into pop, Latin, or dance music, Mamacita's diverse sounds are sure to get you on your feet. This Valentine's Day, join us for a night filled with passion, energy, and unforgettable music. Bring your friends, bring your love for music, and let Mamacita take you on an unforgettable journey. Don’t miss out on the party of the year—buy your tickets now!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+
+            <!-- Event 5 -->
+            <div class="event" data-category="theater/opera" style="background-image: url('https://images-positive.officiallondontheatre.com/solt/image/upload/v1521202152/Odette_Prince_with_Swans_v2_lrg_o8kuu3.jpg'); background-position: center 70%;">
+                <h3>Lacul Lebedelor</h3>
+                <p><strong>Date:</strong> December 20, 2024</p>
+                <p><strong>Location:</strong> Cinema Florin Piersic, Cluj-Napoca</p>
+                <p class="short-description">A mesmerizing ballet performance telling the classic tale of love and magic.</p>
+                <p class="full-description hidden">Join us for an unforgettable evening as "Lacul Lebedelor" (Swan Lake) takes the stage at Cinema Florin Piersic. This timeless ballet, composed by Pyotr Ilyich Tchaikovsky, tells the story of Princess Odette, who is transformed into a swan by an evil sorcerer's curse. Witness breathtaking choreography, stunning costumes, and the iconic score that has captivated audiences for over a century. Whether you're a longtime fan of ballet or new to the art form, this performance promises to be a magical experience you won't want to miss!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="event" data-category="theater/opera" style="background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/02/ywrry4zralh82j43hchcdp.png'); background-position: center 30%;">
+                <h3>Gladiator</h3>
+                <p><strong>Date:</strong> February 2, 2025</p>
+                <p><strong>Location:</strong> Cinema Florin Piersic, Cluj-Napoca</p>
+                <p class="short-description">A thrilling theater experience based on the epic story of gladiators and Rome's glory.</p>
+                <p class="full-description hidden">Step into the heart of the Roman Empire with this breathtaking stage adaptation of the film "Gladiator". This powerful and dramatic production follows Maximus, a betrayed Roman general, who must fight for survival in the gladiatorial arena. Experience the intense action, the fight for justice, and the passion for freedom in a performance that promises to leave you on the edge of your seat. With stunning visual effects, gripping performances, and an unforgettable storyline, this is a must-see event for lovers of history, drama, and theater!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <!-- Event 7 -->
+            <div class="event" data-category="nature" style="background-image: url('https://muntii-nostri.ro/sites/default/files/13._valea_rea_de_retezat_-_robert_dogaru.jpg'); background-position: center 50%;">
+                <h3>Hike Peak Retezat</h3>
+                <p><strong>Date:</strong> March 10, 2025</p>
+                <p><strong>Picking Up Point:</strong> Street Horea 45, Cluj-Napoca</p>
+                <p class="short-description">A thrilling hike to one of Romania's most stunning mountain peaks, Retezat.</p>
+                <p class="full-description hidden">Embark on an unforgettable adventure as we hike the breathtaking Retezat Peak, located in Romania's stunning Retezat National Park. Known for its jagged peaks, crystal-clear lakes, and diverse wildlife, this hike offers an experience like no other. Whether you're an experienced hiker or a nature enthusiast, this trek will leave you in awe of Romania's natural beauty. The hike will take us through scenic landscapes and challenging terrain, but the stunning panoramic views from the peak will make it all worth it. Join us for an active day out in the wild, connecting with nature and creating lasting memories.</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <!-- Event 8 -->
+            <div class="event" data-category="arts/creative" style="background-image: url('https://candlehugsandco.com/cdn/shop/files/IMG_7522-deepredclay_1200x600_crop_center.jpg?v=1713559563'); background-position: center 30%;">
+                <h3>Ceramic Coffee</h3>
+                <p><strong>Date:</strong> January 13, 2025</p>
+                <p><strong>Location:</strong> Meron, Central, Cluj-Napoca</p>
+                <p class="short-description">A creative and relaxing workshop where you can create your own ceramic coffee mug.</p>
+                <p class="full-description hidden">Tap into your artistic side at Ceramic Coffee, a creative workshop where you’ll have the chance to design and create your very own ceramic coffee mug. Whether you're a seasoned artist or a beginner, this hands-on experience is perfect for anyone looking to unwind and explore their creativity. During the workshop, you'll be guided by skilled instructors as you shape, paint, and decorate your ceramic mug. The best part? You’ll leave with a unique, handcrafted piece that’s as functional as it is beautiful. Sip your coffee in style with your one-of-a-kind mug made by you!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+            <!-- Event 9 -->
+            <div class="event" data-category="party" style="background-image: url('https://images.getbento.com/accounts/6d3598fddf4ae11c429fe543ca12d951/media/images/34651Karaoke_Event_Page_TitP3J0.width-1000.jpg?w=1200&fit=crop&auto=compress,format&cs=origin&h=600'); background-position: center 50%;">
+                <h3>Karaoke Night</h3>
+                <p><strong>Date:</strong> 30 December, 2024</p>
+                <p><strong>Location:</strong> Double Decker, Cluj-Napoca</p>
+                <p class="short-description">Sing your heart out at Karaoke Night with friends and fellow music lovers!</p>
+                <p class="full-description hidden">Get ready for a night of fun, laughter, and unforgettable performances at Karaoke Night! Whether you're an experienced singer or just want to have a good time with friends, this event promises a lively atmosphere, great music, and plenty of opportunities to take the stage. From classic hits to modern tunes, everyone can join in and show off their vocal talents. Come enjoy delicious drinks, a vibrant crowd, and the chance to become the star of the night at Double Decker!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+
+            <!-- Event 10 -->
+            <div class="event" data-category="party" style="background-image: url('https://cdn-az.allevents.in/events5/banners/737cf8835fde1fa3d783901bf5536a2b40ce77b09f8b0ac9c4602f165ba005e1-rimg-w1200-h600-dc40c1ed-gmir.jpg?v=1726507218'); background-position: center 90%;">
+                <h3>Party on the Block</h3>
+                <p><strong>Date:</strong> April 09, 2024</p>
+                <p><strong>Location:</strong> Matter, Cluj-Napoca</p>
+                <p class="short-description">Join us for an epic block party at Matter, featuring music, dancing, and fun vibes!</p>
+                <p class="full-description hidden">Get ready to experience the best block party of the year! Party on the Block is all about good music, dancing, and celebrating with friends. With live DJs spinning the hottest tracks, amazing drinks, and a lively atmosphere, this is the perfect way to kick off the spring season. Don’t miss out on the fun—join us at Matter in Cluj-Napoca for an unforgettable night filled with dancing, laughter, and the best party vibes!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+
+            <!-- Event 11 -->
+            <div class="event" data-category="sports" style="background-image: url('https://www.efainlacluj.ro/wp-content/uploads/2023/08/8ED9E5A7-1592-4417-BB7E-E7E734561259.jpeg'); background-position: center 70%;">
+                <h3>FC Universitatea Cluj - CFR 1907 Cluj</h3>
+                <p><strong>Date:</strong> December 09, 2024</p>
+                <p><strong>Location:</strong> Cluj Arena, Cluj-Napoca</p>
+                <p class="short-description">A thrilling football match between two of Cluj-Napoca's top teams: Universitatea Cluj and CFR Cluj!</p>
+                <p class="full-description hidden">Experience the excitement of local football at its finest with the match between FC Universitatea Cluj and CFR 1907 Cluj at Cluj Arena. This is a must-see event for football fans, as these two rival teams battle it out for glory on the field. Expect intense competition, incredible goals, and the passionate energy of the crowd. Whether you're a lifelong fan of FC Universitatea or CFR Cluj, or just love the thrill of live sports, this game will provide unforgettable moments. Don’t miss out on the action—join us for an epic day of football!</p>
+                <a href="buyticket.html" class="event-button buy-ticket-button">Buy Ticket</a>
+                <button class="event-button read-more-button" onclick="toggleDescription(this)">Read More</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-icons-container">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                <img src="images/instalogo.png" alt="Instagram">
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+                <img src="images/tiktoklogo.png" alt="TikTok">
+            </a>
+            <!-- X (formerly Twitter) -->
+            <a href="https://www.x.com" target="_blank" class="social-icon x">
+                <img src="images/xlogo.png" alt="X">
+            </a>
+        </div>
+
+    <!-- Bottom Left Logo -->
+    <div class="bottom-left-logo">
+        <img src="images/logonume.png" alt="Your Logo">
+    </div>
+    <div class="footer-text">
+        <p>Contact us: info@butterf1y.com</p>
+        <p>© 2024 Butterf1y. All Rights Reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>

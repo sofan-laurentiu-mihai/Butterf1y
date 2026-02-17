@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Include your header here if needed -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="profile-menu">
+                <button class="profile-icon" onclick="toggleMenu()">☰</button>
+                <ul class="dropdown-menu">
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
+
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <form id="profile-form">
+            <!-- Profile Picture with Edit Option -->
+            <div class="profile-picture-container">
+                <label for="profile-picture-upload" class="profile-picture-label">
+                    <img id="profile-picture" src="images/raisa.jpg" alt="Profile Picture">
+                </label>
+            </div>
+            <h2 class="profile-name">Butuza Raisa</h2>
+            <p class="profile-bio">"Passionate about hiking, arts & crafts, and Taylor Swift."</p>
+            <div class="profile-info">
+                <p><strong>Email:</strong> butuzaraisa@gmail.com</p>
+                <p><strong>Location:</strong> Cluj-Napoca, Romania</p>
+                <p><strong>College:</strong> TUCN</p>
+                <p><strong>Member Since:</strong> December 2024</p>
+                <p><strong>Student:</strong> Yes</p>
+                <p><strong>Verified:</strong> <img src="https://png.pngtree.com/element_our/png/20181205/valid-vector-icon-png_260889.jpg" class="verified-icon"></p>
+            </div>
+            
+        </form>
+    </div>
+    
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-icons-container">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+                <img src="images/instalogo.png" alt="Instagram">
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+                <img src="images/tiktoklogo.png" alt="TikTok">
+            </a>
+            <!-- X (formerly Twitter) -->
+            <a href="https://www.x.com" target="_blank" class="social-icon x">
+                <img src="images/xlogo.png" alt="X">
+            </a>
+        </div>
+
+    <!-- Bottom Left Logo -->
+    <div class="bottom-left-logo">
+        <img src="images/logonume.png" alt="Your Logo">
+    </div>
+    <div class="footer-text">
+        <p>Contact us: info@butterf1y.com</p>
+        <p>© 2024 Butterf1y. All Rights Reserved.</p>
+    </div>
+    </footer>
+</body>
+</html>
