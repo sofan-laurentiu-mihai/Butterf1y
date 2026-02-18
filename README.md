@@ -16,3 +16,6 @@ This is a group project made during the 16th edition of Polihack. The participan
 
 **Sofan Laurentiu-Mihai** - back-end developer, **Pitarca Bogdan-Andrei** - back-end developer, **Butuza Raisa-Briana** - UI/UX designer & business manager,  **Popescu Ciprian** - back-end developer, **Crisciu Dario-Alexandru** - front-end developer.
 
+
+The website can be accesed at https://sofan-laurentiu-mihai.github.io/Butterf1y/
+
